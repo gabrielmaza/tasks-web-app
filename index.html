@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final de HTML, CSS y JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header_main">
+        <h1>To do App</h1>
+    </header>
+    <main class="main_main">
+        <div class="container">
+            <form id="form">
+                <input type="text" placeholder="Input task..." id="input" class="form_input">
+                <button type="submit" class="form_button"> <span>Agregar tarea</span></button>
+            </form>
+            <div class="tasks-list" id="tasks-list"></div>
+        </div>
+        <template id="template">
+            <div class="task_main yellow">
+                <p>Tarea #1</p>
+                <div class="task_icons-group">
+                    <button class="task_action-btn task_undo-icon d-none">
+                        Undo
+                    </button>
+                    <button class="task_action-btn task_check-icon d-block">
+                        Check
+                    </button>
+                    <button class="task_action-btn task_trash-icon">
+                        Delete
+                    </button>
+
+                </div>
+            </div>
+        </template>
+
+    </main>
+    <footer class="footer_main">
+        <p>Crafted with ❤ by Gabriel Maza</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
