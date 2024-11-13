@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- La etiqueta <!DOCTYPE html> define que el documento usa HTML5. -->
+<!-- El atributo lang="en" en la etiqueta <html> indica que el contenido está en inglés. -->
+
+<head>
+    <!-- La etiqueta <head> contiene información sobre el documento, como el título y los enlaces a recursos externos. -->
+
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> especifica la codificación de caracteres para que el navegador sepa cómo interpretar el texto. UTF-8 es compatible con la mayoría de los caracteres y lenguajes. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Este metaetiqueta ajusta el ancho de la página para que sea igual al ancho de la pantalla del dispositivo. 
+         "width=device-width" hace que el sitio sea responsivo, y "initial-scale=1.0" establece el nivel de zoom inicial. -->
+
+    <title>Proyecto final de HTML, CSS y JavaScript</title>
+    <!-- La etiqueta <title> establece el título de la página que aparece en la pestaña del navegador. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Esta línea vincula un archivo CSS externo llamado "style.css" para darle estilos a la página. -->
+</head>
+
+<body>
+    <!-- <body> contiene todo el contenido visual y estructural que se mostrará en el navegador. -->
+
+    <header class="header_main">
+        <!-- <header> suele contener la parte superior de la página, como el título o el logotipo. -->
+        <h1>To do App</h1>
+        <!-- <h1> define un encabezado principal, aquí usado como el título de la aplicación. -->
+    </header>
+
+    <main class="main_main">
+        <!-- <main> contiene el contenido principal de la página, como el formulario y la lista de tareas. -->
+
+        <div class="container">
+            <!-- <div class="container"> actúa como un contenedor general para centrar y organizar el formulario y la lista. -->
+
+            <form id="form">
+                <!-- <form> define un formulario para añadir nuevas tareas. Tiene un id para facilitar su manipulación en JavaScript. -->
+
+                <input type="text" placeholder="Input task..." id="input" class="form_input">
+                <!-- <input> es un campo de entrada de texto para que el usuario escriba la tarea. 
+                     El placeholder muestra un mensaje dentro del campo hasta que el usuario escribe algo. -->
+
+                <button type="submit" class="form_button">
+                    <!-- <button> define un botón de envío. Al hacer clic en este botón, el formulario se enviará. -->
+                    <span>Agregar tarea</span>
+                    <!-- <span> es un contenedor en línea para el texto del botón. -->
+                </button>
+            </form>
+
+            <div class="tasks-list" id="tasks-list"></div>
+            <!-- <div id="tasks-list"> es el contenedor para las tareas añadidas. JavaScript se usará para insertar tareas aquí. -->
+        </div>
+
+        <template id="template">
+            <!-- <template> es un fragmento de HTML oculto que contiene el diseño de una tarea. 
+                 No se muestra directamente en la página, pero se puede clonar con JavaScript para crear nuevas tareas. -->
+
+            <div class="task_main yellow">
+                <!-- Este <div> representa una tarea. Se le da una clase "yellow" para aplicarle estilo con CSS. -->
+
+                <p>Tarea #1</p>
+                <!-- <p> es un párrafo que muestra el texto de la tarea. Aquí está un ejemplo inicial, pero se cambiará dinámicamente. -->
+
+                <div class="task_icons-group">
+                    <!-- <div class="task_icons-group"> es un contenedor para los botones de acciones (deshacer, marcar y borrar tarea). -->
+
+                    <button class="task_action-btn task_undo-icon d-none">
+                        <!-- Este botón tiene la clase "d-none" para ocultarlo al inicio y "task_undo-icon" para identificar su acción (deshacer). -->
+                        Undo
+                    </button>
+
+                    <button class="task_action-btn task_check-icon d-block">
+                        <!-- Este botón tiene la clase "d-block" para mostrarlo al inicio y "task_check-icon" para identificar su acción (marcar como hecho). -->
+                        Check
+                    </button>
+
+                    <button class="task_action-btn task_trash-icon">
+                        <!-- Este botón permite borrar la tarea, identificado con "task_trash-icon". -->
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <footer class="footer_main">
+        <!-- <footer> contiene la parte inferior de la página. Suele usarse para información de copyright o créditos. -->
+        <p>Crafted with ❤ by Gabriel Maza</p>
+        <!-- <p> muestra un texto personalizado en el pie de página. -->
+    </footer>
+
+    <script src="app.js"></script>
+    <!-- Esta línea carga el archivo "app.js", que contiene el código JavaScript para la funcionalidad de la aplicación. -->
+</body>
+
+</html>
